@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 760px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin: 20px 0 20px 15%;
+}
+table{
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+th, td{
+    /* padding: 3px; */
+    border-right: 3px solid black;;
+}
+tbody tr:nth-child(odd){
+    background-color: lightgray;
+}
+.go_back{
+    margin-left: 70%;
+}
+.add_show{
+    width: 320px;
+    background-color: #dadada;
+    margin-left: 15%;
+    padding: 15px;
+}
+span{
+    font-weight: lighter;
+}
+.add_show div{
+    display: inline-block;
+}
+input{
+    height: 25px;
+    margin-bottom: 20px;
+    padding: 3px;
+}
+#title{
+    width: 305px;
+    display: block;
+}
+#network{
+    width: 180px;
+}
+#desc{
+    display: block;
+}
+p{
+    margin: 15px 0 15px 0;
+}
+button{
+    width: 70px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 3px 3px black;
+    margin-left: 38%;
+}
+.show_info{
+    margin-left: 15%;
+}
+ul{
+    margin: 0 0 15px 130px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (All)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css ' %}">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>All Shows</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Network</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for shows in shows_list %}
+                <tr>
+                    <td> <a href="">{{ shows.id }}</a></td>
+                    <!-- <th scope="row"> <a href="">{{ shows.id }}</a> </th> -->
+                    <td>{{ shows.title }}</td>
+                    <!-- <th scope="row"> {{ shows.title }} </th> -->
+                    <td>{{ shows.network }}</td>
+                    <!-- <th scope="row"> {{ shows.network }} </th> -->
+                    <td>{{ shows.release_date|date:'F dS , Y' }}</td>
+                    <!-- <th scope="row"> {{ shows.release_date|date:'F dS , Y' }} </th> -->
+                    <td><a href="{{ shows.id }}">Show</a> | <a href="{{ shows.id }}/edit">Edit</a> | <a href="delete/{{ shows.id }}">Delete</a></td>
+                    <!-- <th scope="row"> <a href="{{ shows.id }}">Show</a> | <a href="{{ shows.id }}/edit">Edit</a> | <a href="delete/{{ shows.id }}">Delete</a> </th> -->
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table><br>
+        <a href="/new">Add a New Show</a>
+    </div>
+
+</body>
+</html>
